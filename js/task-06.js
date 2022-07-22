@@ -7,3 +7,4 @@ function validation() {
 }
 
 input.addEventListener(`blur`, validation);
+input.addEventListener(`focus`, () => {input.classList.remove(`invalid`); input.classList.remove(`valid`); });
