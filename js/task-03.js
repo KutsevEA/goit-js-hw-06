@@ -13,10 +13,15 @@ const images = [
   },
 ];
 
+const gallery = document.querySelector('.gallery');
 
 const inputArray = images.map(image => {
- const element = `<li><img src=${image.url} alt=${image.alt} width=250 ></li>`;
+ const element = `<li><img src=${image.url} alt=${image.alt} width = 250 padding =  ></li>`;
   return element;
 });
 
-document.querySelector('.gallery').insertAdjacentHTML('beforeend', inputArray.join(``));
+gallery.insertAdjacentHTML('beforeend', inputArray.join(``));
+gallery.style.listStyle = `none`;
+gallery.style.display = `grid`;
+gallery.style.backgroundColor = `#2196F3`;
+ 
