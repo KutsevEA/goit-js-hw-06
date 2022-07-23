@@ -1,10 +1,10 @@
-const input = document.querySelector(`#validation-input`);
+const inputEl = document.querySelector(`#validation-input`);
 
 function validation() {
-  if (input.value.length < 6) {
-    input.classList.add(`invalid`);
-  } else input.classList.add(`valid`);
+  if (inputEl.value.length < inputEl.getAttribute('data-length')) {
+    inputEl.classList.add(`invalid`);
+  } else inputEl.classList.add(`valid`);
 }
 
-input.addEventListener(`blur`, validation);
-input.addEventListener(`focus`, () => {input.classList.remove(`invalid`); input.classList.remove(`valid`); });
+inputEl.addEventListener(`blur`, validation);
+inputEl.addEventListener(`focus`, () => {inputEl.classList.remove(`invalid`); inputEl.classList.remove(`valid`); });

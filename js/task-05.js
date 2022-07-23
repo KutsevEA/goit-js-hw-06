@@ -5,10 +5,9 @@ textInput.addEventListener('input', event => {
   output.textContent = event.currentTarget.value;
 });
 
-textInput.addEventListener(`blur`, () => {
+document.addEventListener('keyup', () => {
   if (output.textContent === ``) {
     output.textContent = `Anonymous`;
   }
 });
-
 
